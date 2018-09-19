@@ -42,41 +42,44 @@
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
     glClear(GL_COLOR_BUFFER_BIT);
     
-    [self.effect prepareToDraw];
-    
     [self setMatrices];
     
     glEnableVertexAttribArray(GLKVertexAttribPosition);
     glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, 0, cubePositions);
     
-    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
-    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, 0, cubeTexels);
-
     glEnableVertexAttribArray(GLKVertexAttribNormal);
     glVertexAttribPointer(GLKVertexAttribNormal, 3, GL_FLOAT, GL_FALSE, 0, cubeNormals);
 
-    glDrawArrays(GL_TRIANGLES, 0, cubeVertices);
+    for (int i = 0; i < cubeMaterials; i++) {
+        [self.effect prepareToDraw];
+        
+        self.effect.material.diffuseColor = GLKVector4Make(cubeDiffuses[i][0], cubeDiffuses[i][1], cubeDiffuses[i][2], 1.0f);
+        self.effect.material.specularColor = GLKVector4Make(cubeSpeculars[i][0], cubeSpeculars[i][1], cubeSpeculars[i][2], 1.0f);
+        
+        glDrawArrays(GL_TRIANGLES, cubeFirsts[i], cubeCounts[i]);
+    }
 }
 
 - (void)createEffect {
     self.effect = [GLKBaseEffect new];
     
-    NSDictionary *options = @{GLKTextureLoaderOriginBottomLeft: @YES};
-    NSError *error;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"cube.png" ofType:nil];
-    GLKTextureInfo *texture = [GLKTextureLoader textureWithContentsOfFile:path options:options error:&error];
+//    NSDictionary *options = @{GLKTextureLoaderOriginBottomLeft: @YES};
+//    NSError *error;
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"cube.png" ofType:nil];
+//    GLKTextureInfo *texture = [GLKTextureLoader textureWithContentsOfFile:path options:options error:&error];
+//
+//    if (texture == nil) {
+//        NSLog(@"Error loading file: %@", [error localizedDescription]);
+//    }
+//
+//    self.effect.texture2d0.name = texture.name;
+//    self.effect.texture2d0.enabled = true;
     
-    if (texture == nil) {
-        NSLog(@"Error loading file: %@", [error localizedDescription]);
-    }
-    
-    self.effect.texture2d0.name = texture.name;
-    self.effect.texture2d0.enabled = true;
-    
-    // TODO: Lighting
-//    self.effect.lightingType = GLKLightingTypePerPixel;
-//    self.effect.light0.enabled = GL_TRUE;
-//    self.effect.light0.position = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
+    self.effect.lightingType = GLKLightingTypePerPixel;
+    self.effect.light0.enabled = GL_TRUE;
+    self.effect.light0.position = GLKVector4Make(1.0f, 1.0f, 1.0f, 1.0f);
+    self.effect.light0.specularColor = GLKVector4Make(0.25f, 0.25f, 0.25f, 1.0f);
+    self.effect.light0.diffuseColor = GLKVector4Make(0.75f, 0.75f, 0.75f, 1.0f);
 }
 
 - (void)setMatrices {
