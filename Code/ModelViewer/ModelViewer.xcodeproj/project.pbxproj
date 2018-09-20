@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40C5773C215341E100B1F17B /* starship_decal.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C5773B215341E100B1F17B /* starship_decal.png */; };
+		40C5773E2153A75900B1F17B /* cube_decal.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C5773D2153A75900B1F17B /* cube_decal.png */; };
+		40C6DC90215234530011FBC7 /* starship.c in Sources */ = {isa = PBXBuildFile; fileRef = 40C6DC8E215234530011FBC7 /* starship.c */; };
+		40C6DC9721523E8B0011FBC7 /* Shader.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C6DC9621523E8B0011FBC7 /* Shader.m */; };
+		40C6DC9A21523EAD0011FBC7 /* PhongShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C6DC9921523EAD0011FBC7 /* PhongShader.m */; };
+		40C6DC9B215244180011FBC7 /* Phong.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 40C6DC9121523AFA0011FBC7 /* Phong.vsh */; };
+		40C6DC9C2152441B0011FBC7 /* Phong.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 40C6DC9321523B280011FBC7 /* Phong.fsh */; };
 		40E9329B214913A300992F47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E9329A214913A300992F47 /* AppDelegate.m */; };
 		40E9329E214913A300992F47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E9329D214913A300992F47 /* ViewController.m */; };
 		40E932A1214913A300992F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40E9329F214913A300992F47 /* Main.storyboard */; };
@@ -18,6 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40C5773B215341E100B1F17B /* starship_decal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starship_decal.png; sourceTree = "<group>"; };
+		40C5773D2153A75900B1F17B /* cube_decal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube_decal.png; sourceTree = "<group>"; };
+		40C6DC8E215234530011FBC7 /* starship.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = starship.c; sourceTree = "<group>"; };
+		40C6DC8F215234530011FBC7 /* starship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starship.h; sourceTree = "<group>"; };
+		40C6DC9121523AFA0011FBC7 /* Phong.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = Phong.vsh; sourceTree = "<group>"; };
+		40C6DC9321523B280011FBC7 /* Phong.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Phong.fsh; sourceTree = "<group>"; };
+		40C6DC9521523E8B0011FBC7 /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		40C6DC9621523E8B0011FBC7 /* Shader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shader.m; sourceTree = "<group>"; };
+		40C6DC9821523EAD0011FBC7 /* PhongShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhongShader.h; sourceTree = "<group>"; };
+		40C6DC9921523EAD0011FBC7 /* PhongShader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhongShader.m; sourceTree = "<group>"; };
 		40E93296214913A300992F47 /* ModelViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModelViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40E93299214913A300992F47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		40E9329A214913A300992F47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +80,10 @@
 		40E93298214913A300992F47 /* ModelViewer */ = {
 			isa = PBXGroup;
 			children = (
+				40C5773B215341E100B1F17B /* starship_decal.png */,
+				40C6DC8E215234530011FBC7 /* starship.c */,
+				40C6DC8F215234530011FBC7 /* starship.h */,
+				40C5773D2153A75900B1F17B /* cube_decal.png */,
 				40FDB3DA215096E5009B877C /* cube.h */,
 				40E932AF2149178700992F47 /* cube.c */,
 				40E932B12149178700992F47 /* cube.png */,
@@ -75,6 +96,12 @@
 				40E932A4214913A500992F47 /* LaunchScreen.storyboard */,
 				40E932A7214913A500992F47 /* Info.plist */,
 				40E932A8214913A500992F47 /* main.m */,
+				40C6DC9121523AFA0011FBC7 /* Phong.vsh */,
+				40C6DC9321523B280011FBC7 /* Phong.fsh */,
+				40C6DC9521523E8B0011FBC7 /* Shader.h */,
+				40C6DC9621523E8B0011FBC7 /* Shader.m */,
+				40C6DC9821523EAD0011FBC7 /* PhongShader.h */,
+				40C6DC9921523EAD0011FBC7 /* PhongShader.m */,
 			);
 			path = ModelViewer;
 			sourceTree = "<group>";
@@ -136,7 +163,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C5773E2153A75900B1F17B /* cube_decal.png in Resources */,
+				40C6DC9C2152441B0011FBC7 /* Phong.fsh in Resources */,
+				40C6DC9B215244180011FBC7 /* Phong.vsh in Resources */,
 				40E932A6214913A500992F47 /* LaunchScreen.storyboard in Resources */,
+				40C5773C215341E100B1F17B /* starship_decal.png in Resources */,
 				40E932A3214913A500992F47 /* Assets.xcassets in Resources */,
 				40E932B32149178700992F47 /* cube.png in Resources */,
 				40E932A1214913A300992F47 /* Main.storyboard in Resources */,
@@ -154,6 +185,9 @@
 				40E9329E214913A300992F47 /* ViewController.m in Sources */,
 				40E932A9214913A500992F47 /* main.m in Sources */,
 				40E9329B214913A300992F47 /* AppDelegate.m in Sources */,
+				40C6DC9A21523EAD0011FBC7 /* PhongShader.m in Sources */,
+				40C6DC9721523E8B0011FBC7 /* Shader.m in Sources */,
+				40C6DC90215234530011FBC7 /* starship.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
