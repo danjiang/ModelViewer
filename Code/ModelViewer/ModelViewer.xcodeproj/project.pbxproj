@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403FD8AC2154933D004A1258 /* Transformations.m in Sources */ = {isa = PBXBuildFile; fileRef = 403FD8AB2154933D004A1258 /* Transformations.m */; };
 		40C5773C215341E100B1F17B /* starship_decal.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C5773B215341E100B1F17B /* starship_decal.png */; };
 		40C5773E2153A75900B1F17B /* cube_decal.png in Resources */ = {isa = PBXBuildFile; fileRef = 40C5773D2153A75900B1F17B /* cube_decal.png */; };
 		40C6DC90215234530011FBC7 /* starship.c in Sources */ = {isa = PBXBuildFile; fileRef = 40C6DC8E215234530011FBC7 /* starship.c */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		403FD8AA2154933D004A1258 /* Transformations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transformations.h; sourceTree = "<group>"; };
+		403FD8AB2154933D004A1258 /* Transformations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transformations.m; sourceTree = "<group>"; };
 		40C5773B215341E100B1F17B /* starship_decal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starship_decal.png; sourceTree = "<group>"; };
 		40C5773D2153A75900B1F17B /* cube_decal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cube_decal.png; sourceTree = "<group>"; };
 		40C6DC8E215234530011FBC7 /* starship.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = starship.c; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				40C6DC9621523E8B0011FBC7 /* Shader.m */,
 				40C6DC9821523EAD0011FBC7 /* PhongShader.h */,
 				40C6DC9921523EAD0011FBC7 /* PhongShader.m */,
+				403FD8AA2154933D004A1258 /* Transformations.h */,
+				403FD8AB2154933D004A1258 /* Transformations.m */,
 			);
 			path = ModelViewer;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				40E9329B214913A300992F47 /* AppDelegate.m in Sources */,
 				40C6DC9A21523EAD0011FBC7 /* PhongShader.m in Sources */,
 				40C6DC9721523E8B0011FBC7 /* Shader.m in Sources */,
+				403FD8AC2154933D004A1258 /* Transformations.m in Sources */,
 				40C6DC90215234530011FBC7 /* starship.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

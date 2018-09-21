@@ -30,6 +30,7 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="eMh-bF-8zA" firstAttribute="centerX" secondItem="ZGi-us-Obo" secondAttribute="centerX" id="SV9-zb-8fo"/>
                             <constraint firstItem="XJn-NC-vkt" firstAttribute="bottom" secondItem="eMh-bF-8zA" secondAttribute="bottom" constant="21" id="Ui4-XR-1sl"/>
@@ -37,10 +38,28 @@
                         <viewLayoutGuide key="safeArea" id="XJn-NC-vkt"/>
                         <connections>
                             <outlet property="delegate" destination="vNy-Tt-HNR" id="M6k-Dz-ydF"/>
+                            <outletCollection property="gestureRecognizers" destination="91H-zt-OG0" appends="YES" id="GFc-Ir-7Rf"/>
+                            <outletCollection property="gestureRecognizers" destination="bRQ-MG-2oa" appends="YES" id="Q40-Ab-ucB"/>
+                            <outletCollection property="gestureRecognizers" destination="VIr-Xm-SMO" appends="YES" id="9wG-8f-eyT"/>
                         </connections>
                     </glkView>
                 </glkViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYs-yk-7rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="2" id="91H-zt-OG0">
+                    <connections>
+                        <action selector="pan:" destination="vNy-Tt-HNR" id="kJA-sz-OW5"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="bRQ-MG-2oa">
+                    <connections>
+                        <action selector="pinch:" destination="vNy-Tt-HNR" id="ISR-1Q-QTd"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="VIr-Xm-SMO">
+                    <connections>
+                        <action selector="rotation:" destination="vNy-Tt-HNR" id="m4k-IY-Xxz"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="148" y="132"/>
         </scene>
